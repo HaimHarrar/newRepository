@@ -1,21 +1,17 @@
+import java.util.Scanner;
 public class Main {
-    public boolean addPayment(int day, String num, String name, int fuel) {
-        boolean ifSucceeded = false;
-
-        if(worked(name, day) && existCar(num) && existDriver(name)) {
-            Node<Payment>[] newPayments = new Node<Payment>[this.paymeents.length + 1];
-
-            for (int i = 0; i < this.payments.length; i++) {
-                newPayments[i] = this.payments[i];
-            }
-
-            Node<Payment> payment = new Node<Payment>(day, num, name, fuel);
-            newPayments[newPayments.length - 1] = payment;
-
-            ifSucceeded = true;
-            this.payments = newPayments;
-        }
-
-        return ifSucceeded;
-    }
+	
+	public static void main(String[] args) {
+		
+	
+		Ques2[]arr=new Ques2[3];
+		arr[0]=new Ques2(3,"haim");
+		arr[1]=new Ques2(4.7,"avi");
+		arr[2]=new Ques2(1.3,"josef");
+		double avg=arr[0].avg_jump(arr);
+		System.out.println(avg);
+		arr[0].above_avg(arr, avg);
+		
+ 	}
+	
 }
